@@ -11,6 +11,7 @@ import {
     MenubarTrigger,
   } from "@/components/ui/menubar";
 import { navItems } from "@/data";
+import Link from "next/link";
 import { FcMenu } from "react-icons/fc";
   
   
@@ -21,9 +22,11 @@ import { FcMenu } from "react-icons/fc";
           <MenubarTrigger><FcMenu /></MenubarTrigger>
           <MenubarContent>
               {navItems.map((item)=>(
+            <Link href={item.link}>
             <MenubarItem>
                 {item.name}
             </MenubarItem>
+            </Link>
               ))}
           </MenubarContent>
         </MenubarMenu>
