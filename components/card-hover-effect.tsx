@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { Meteors } from "./meteors";
 
 export const HoverEffect = ({
   items,
@@ -76,6 +77,7 @@ export const Card = ({
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
+        <Meteors number={20} />
       </div>
     </div>
   );
@@ -103,7 +105,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 dark:text-zinc-400 text-zinc-900 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
