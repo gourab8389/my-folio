@@ -4,7 +4,7 @@ import { HoverEffect } from "@/components/card-hover-effect";
 export function Skills() {
   return (
     <div className="max-w-5xl mx-auto px-8" id="skills">
-        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-400 dark:from-blue-300 to-neutral-300">My Skills</p>
+        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400">My Skills</p>
       <HoverEffect items={projects} />
     </div>
   );
