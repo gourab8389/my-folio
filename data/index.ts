@@ -115,4 +115,26 @@ export const navItems = [
 
 
 
+  export const skills = [
+    {
+      title: "Stripe",
+      description:
+        "A technology company that builds economic infrastructure for the internet.",
+      link: "",
+    },
+    {
+      title: "Netflix",
+      description:
+        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      link: "",
+    },
+    {
+      title: "Google",
+      description:
+        "A multinational technology company that specializes in Internet-related services and products.",
+      link: "",
+    }
+  ];
+
+
 
