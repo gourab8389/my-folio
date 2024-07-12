@@ -3,6 +3,7 @@ import About from "./components/About";
 import { Navbar } from "./components/Navbar";
 import { FloatingNav } from "@/components/FloatingNav";
 import { navItems } from "@/data";
+import { Skills } from "./components/Skills";
 
 export default function Home() {
   return (
@@ -14,9 +15,10 @@ export default function Home() {
       <div className="absolute top-0 right-5 mt-5">
         <Navbar />
       </div>
-      <div className="flex flex-col items-center justify-center mt-16">
+      <div className="flex flex-col items-center justify-center mt-5 ">
       <FloatingNav navItems={navItems}/>
         <About />
+        <Skills/>
       </div>
     </main>
   );

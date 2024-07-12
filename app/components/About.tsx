@@ -5,7 +5,7 @@ import React from 'react'
 const About = () => {
   return (
     <div id='#about' className='py-48'>
-      <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-500 text-center">
+      <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-400 dark:from-blue-300 to-neutral-500 text-center">
       Hi, Gourab here
       a web developer.
       </p>
