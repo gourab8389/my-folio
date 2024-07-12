@@ -6,3 +6,113 @@ export const navItems = [
     { name: "Feedback", icon:"/feedback1.svg", link: "#feedback" },
     { name: "Contact", icon:"/contact.svg", link: "#contact" },
   ];
+
+
+
+  export const workExperience = [
+    {
+      id: 1,
+      title: "Frontend Developer",
+      desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+      className: "md:col-span-2",
+      thumbnail: "/exp1.svg",
+    },
+    {
+      id: 2,
+      title: "Focusing on OS",
+      desc: "Learned Operating System and gain skills",
+      className: "md:col-span-2", 
+      thumbnail: "/exp2.svg",
+    },
+    {
+      id: 3,
+      title: "Freelance Web Dev Project",
+      desc: "Led the dev of a Web app for a client, from initial concept to deployment on app stores.",
+      className: "md:col-span-2", 
+      thumbnail: "/exp3.svg",
+    },
+    {
+      id: 4,
+      title: "Experience in JAVA and DSA",
+      desc: "Learned JAVA and DSA, certified from Linkedin Courses",
+      className: "md:col-span-2",
+      thumbnail: "/exp4.svg",
+    },
+  ];
+
+
+
+  export const socialMedia = [
+    {
+      id: 1,
+      img: "/git.svg",
+      link:"https://github.com/gourab8389"
+    },
+    {
+      id: 2,
+      img: "/twit.svg",
+      link:"https://github.com/gourab8389"
+    },
+    {
+      id: 3,
+      img: "/link.svg",
+      link:"https://www.linkedin.com/in/gourab-dey-1b2b8928a/"
+    },
+  ];
+
+
+
+  export const projects = [
+    {
+      id: 1,
+      title: "AI Content Generator",
+      des: "Generate high-quality content on more than 50 topics effortlessly",
+      img: "/AI-content1.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg", "/fm.svg"],
+      link: "https://quill-ai-bz5w.vercel.app/",
+    },
+    {
+      id: 2,
+      title: "Eventsy",
+      des: "Eventsy, Join with us and create your event and explore to all.",
+      img: "/eventsy.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg"],
+      link: "https://eventsy.exions.xyz",
+    },
+    {
+      id: 3,
+      title: "Imaginify",
+      des: "A real software service app with AI features and a payments and credits system using the latest tech stack.",
+      img: "/p3.svg",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+      link: "https://imaginify.exions.xyz/",
+    },
+    {
+      id: 4,
+      title: "Soloplay",
+      des: "Game hub, my first Next.js website",
+      img: "/soloplay.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+      link: "https://game-hub.exions.xyz/",
+    },
+    {
+      id: 5,
+      title: "Travel-Web",
+      des: "Connect to your destination",
+      img: "/travel.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+      link: "https://travel-web.exions.xyz/",
+    },
+    {
+      id: 6,
+      title: "Search-Ingine",
+      des: "AI-image search ingine",
+      img: "/search-engine.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+      link: "https://search-engine-a26m.vercel.app/",
+    },
+  ];
+
+
+
+

@@ -5,6 +5,7 @@ import { FloatingNav } from "@/components/FloatingNav";
 import { navItems } from "@/data";
 import { Skills } from "./components/Skills";
 import { Experiences } from "./components/Experiences";
+import { Projects } from "./components/Projects";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <About />
         <Skills/>
         <Experiences/>
+        <Projects/>
       </div>
     </main>
   );
