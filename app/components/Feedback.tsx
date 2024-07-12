@@ -13,7 +13,7 @@ export function Feedback() {
     console.log("Form submitted");
   };
   return (
-    <div id="feedback" className="max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-gray-100 dark:bg-gray-950 mt-10 border border-gray-800">
+    <div id="feedback" className="max-w-lg w-full mx-10 rounded-none md:rounded-2xl p-8 md:p-8 shadow-input bg-gray-100 dark:bg-gray-950 mt-10 border border-gray-800">
         <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400">Feedback</p>
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
