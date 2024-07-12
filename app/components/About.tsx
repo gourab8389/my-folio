@@ -1,6 +1,7 @@
 import { HoverBorderGradient } from '@/components/hover-border-gradient'
 import Link from 'next/link'
 import React from 'react'
+import { FaGithub } from 'react-icons/fa'
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
       >
         
-        <span>Connect with Github</span>
+        <span className='flex flex-row gap-1'>Connect with Github<p>{" "}<FaGithub className='mt-1'/></p></span>
       </HoverBorderGradient>
       </Link>
       </div>
