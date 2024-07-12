@@ -8,7 +8,7 @@ import { TabsContent } from '@/components/ui/tabs'
 
 function ProjectForm() {
     const handleSubmit = async ()=>{
-        console.log("projects submiited")
+        console.log("projects submitted")
     }
   return (
     <form onSubmit={handleSubmit}>
