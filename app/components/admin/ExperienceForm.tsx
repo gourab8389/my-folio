@@ -5,38 +5,35 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { TabsContent } from '@/components/ui/tabs'
 
-
-function ProjectForm() {
-    const handleSubmit = async ()=>{
-        console.log("projects submiited")
+function ExperienceForm() {
+    const handleSubmit = async () => {
+        console.log("skills submitted")
     }
+
+
   return (
     <form onSubmit={handleSubmit}>
-        <TabsContent value="projects">
+        <TabsContent value="skills">
         <Card>
           <CardHeader>
-            <CardTitle>Projects</CardTitle>
+            <CardTitle>Experience</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             <div className="space-y-1">
-              <Label htmlFor="title">Project Title</Label>
-              <Input id="title" type='text' />
+              <Label htmlFor="title">Title</Label>
+              <Input id="title" type="text" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="name">name</Label>
+              <Input id="name" type="text" />
             </div>
             <div className="space-y-1">
               <Label htmlFor="description">Description</Label>
-              <Input id="description" type='text' />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="link">Project Link</Label>
-              <Input id="link" type='text' />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="image">Image Url</Label>
-              <Input id="image" type='text'/>
+              <Input id="description" type="text" />
             </div>
           </CardContent>
           <CardFooter>
-            <Button type='submit'>Save changes</Button>
+            <Button type='submit'>Save Changes</Button>
           </CardFooter>
         </Card>
       </TabsContent>
@@ -44,4 +41,4 @@ function ProjectForm() {
   )
 }
 
-export default ProjectForm
+export default ExperienceForm

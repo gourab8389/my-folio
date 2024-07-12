@@ -11,7 +11,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string;
+    des: string;
     name: string;
     title: string;
   }[];
@@ -100,15 +100,15 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span className="relative z-20 text-sm leading-[1.6] text-gray-900 dark:text-gray-100 font-normal">
-                {item.quote}
+                {item.name}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <span className="text-sm leading-[1.6] text-gray-700 dark:text-gray-400 font-normal">
-                    {item.name}
+                    {item.title}
                   </span>
                   <span className="text-sm leading-[1.6] text-gray-700 dark:text-gray-400 font-normal">
-                    {item.title}
+                  {item.des}
                   </span>
                 </span>
               </div>

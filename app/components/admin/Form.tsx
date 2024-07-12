@@ -18,18 +18,20 @@ import {
 } from "@/components/ui/tabs"
 import ProjectForm from "./ProjectForm"
 import SkillForm from "./SkillForm"
+import ExperienceForm from "./ExperienceForm"
 
 export function Form() {
   return (
     <Tabs defaultValue="projects" className="w-[400px]">
+
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="projects">Projects</TabsTrigger>
-        <TabsTrigger value="skills">Skills</TabsTrigger>
+        <TabsTrigger value="skills">Experience</TabsTrigger>
       </TabsList>
 
 
       <ProjectForm/>
-      <SkillForm/>
+      <ExperienceForm/>
 
     </Tabs>
   )

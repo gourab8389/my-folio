@@ -1,3 +1,4 @@
+"use client"
 import { Input } from '@/components/input'
 import { Label } from '@/components/label'
 import { Button } from '@/components/ui/button'
@@ -5,8 +6,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { TabsContent } from '@/components/ui/tabs'
 
 function SkillForm() {
+    const handleSubmit = async () => {
+        console.log("skills submitted")
+    }
+
+
   return (
-    <TabsContent value="skills">
+    <form onSubmit={handleSubmit}>
+        <TabsContent value="skills">
         <Card>
           <CardHeader>
             <CardTitle>Skills</CardTitle>
@@ -22,10 +29,11 @@ function SkillForm() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save Changes</Button>
+            <Button type='submit'>Save Changes</Button>
           </CardFooter>
         </Card>
       </TabsContent>
+    </form>
   )
 }
 
