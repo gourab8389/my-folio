@@ -7,6 +7,7 @@ import { Skills } from "./components/Skills";
 import { Experiences } from "./components/Experiences";
 import { Projects } from "./components/Projects";
 import { Feedback } from "./components/Feedback";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <Experiences/>
         <Projects/>
         <Feedback/>
+        <Footer/>
       </div>
     </main>
   );
