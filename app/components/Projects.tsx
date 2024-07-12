@@ -7,7 +7,7 @@ import React from "react";
 export function Projects() {
   return (
     <div id="projects" className="">
-        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400">My Some of Projects</p>
+        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400">Some of My Projects</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto p-12 w-full">
       {projects.map((item) => (
         <Link href={item.link} key={item.id}>
