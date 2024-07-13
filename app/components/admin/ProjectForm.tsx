@@ -24,10 +24,28 @@ function ProjectForm() {
       e.preventDefault();
 
       if(!title || !description || !link || !gitLink || !imageUrl){
-        alert("Some thing you missed to fill.")
+        alert("Some thing you missed to fill.");
+        return;
       }
-      
-        console.log("projects submitted")
+       
+      try {
+        const post = await fetch("/api/projects",{
+          method: "POST",
+          headers: {
+            "Content-type": "application/json"
+          },
+          body: JSON.stringify({title, description, link, gitLink, imageUrl})
+        });
+
+        if(post.ok){
+          router.refresh();
+        }else{
+          throw new Error("Failed to create the project");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+        
     }
 
 
