@@ -55,7 +55,7 @@ const allProjects: React.FC = () => {
   return (
 
 
-    <main className="relative flex flex-col overflow-clip h-auto lg:h-auto w-full dark:bg-gray-700 bg-gray-50 dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
+    <main className="relative flex flex-col overflow-clip h-auto lg:h-auto w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.5]">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-700 bg-gray-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <div className="absolute top-0 left-5 flex ml-5 mt-5">
@@ -63,13 +63,13 @@ const allProjects: React.FC = () => {
       </div>
 
       <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">
-        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 mb-8">
+        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 dark:to-slate-600 mb-8">
           All of My Projects
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((item) => (
             <CardContainer key={item._id} className="inter-var" containerClassName="p-4">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border border-gray-300">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"

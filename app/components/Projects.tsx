@@ -65,7 +65,7 @@ export function Projects() {
       </div>
       <div className="">
         <Link href={'/allProjects'}>
-          <div className="flex items-center justify-center lg:justify-start lg:ml-[23rem] mt-8 lg:mt-0">
+          <div className="flex items-center justify-center lg:justify-start lg:ml-[27rem] mt-8 lg:mt-0">
             <Button>See all Projects</Button>
           </div>
         </Link>
