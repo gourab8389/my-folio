@@ -8,6 +8,7 @@ import { Experiences } from "./components/Experiences";
 import { Projects } from "./components/Projects";
 import { Feedback } from "./components/Feedback";
 import Footer from "./components/Footer";
+import { Spotlight } from "@/components/Spotlight";
 
 export default function Home() {
   return (
