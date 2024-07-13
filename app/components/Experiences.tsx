@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 export function Experiences() {
   return (
     <div id="experiences" className="h-[40rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden gap-10">
-        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400">My Experiences</p>
+        <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-500">My Experiences</p>
       <InfiniteMovingCards
         items={experiences}
         direction="right"

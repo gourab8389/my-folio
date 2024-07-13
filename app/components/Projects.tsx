@@ -9,13 +9,13 @@ import React from "react";
 export function Projects() {
   return (
     <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">
-      <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 mb-8">
+      <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-neutral-500 mb-8">
         Some of My Projects
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-1 lg:mx-2">
         {projects.map((item) => (
-          <CardContainer key={item.id} className="inter-var" containerClassName="p-4">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border">
+          <CardContainer key={item.id} className="inter-var" containerClassName="p-5">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border dark:border-gray-500">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -63,11 +63,13 @@ export function Projects() {
           </CardContainer>
         ))}
       </div>
-      <Link href={'allProjects'}>      
-      <div className="flex items-center ml-[23rem]">
-        <Button>See all Projects</Button>
+      <div className="">
+        <Link href={'/allProjects'}>
+          <div className="flex items-center justify-center lg:justify-start lg:ml-[23rem] mt-8 lg:mt-0">
+            <Button>See all Projects</Button>
+          </div>
+        </Link>
       </div>
-      </Link>
     </div>
   );
 }
