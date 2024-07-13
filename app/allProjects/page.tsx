@@ -61,6 +61,9 @@ const allProjects: React.FC = () => {
       <div className="absolute top-0 left-5 flex ml-5 mt-5">
         <ModeToggle />
       </div>
+      <div className="absolute top-0 right-5 flex mr-5 mt-5">
+        <button className=''>Back</button>
+      </div>
 
       <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">
         <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 dark:to-slate-600 mb-8">
