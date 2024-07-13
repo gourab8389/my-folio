@@ -1,5 +1,6 @@
 "use client"
 import { CardBody, CardContainer, CardItem } from '@/components/3d-card'
+import { ModeToggle } from '@/components/toggleMode'
 import { Button } from '@/components/ui/button'
 
 import Image from 'next/image'
@@ -56,6 +57,10 @@ const allProjects: React.FC = () => {
 
     <main className="relative flex flex-col overflow-clip h-auto lg:h-auto w-full dark:bg-gray-700 bg-gray-50 dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-700 bg-gray-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
+      <div className="absolute top-0 left-5 flex ml-5 mt-5">
+        <ModeToggle />
+      </div>
 
       <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">
         <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 mb-8">

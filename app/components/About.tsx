@@ -6,11 +6,11 @@ import { FaGithub } from 'react-icons/fa'
 const About = () => {
   return (
     <div id='#about' className='py-48 px-7'>
-      <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-400 dark:from-blue-300 to-neutral-500 text-center">
+      <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-400 dark:from-blue-300 to-slate-800 dark:to-neutral-300 text-center">
       Hi, Gourab here
       a fullstack web developer.
       </p>
-      <p className="text-xl sm:text-2xl md:text-3xl relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-400 to-pink-400 text-center px-4 sm:px-10 md:px-20 mt-5">
+      <p className="text-xl sm:text-2xl md:text-3xl relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-600 dark:from-blue-400 to-pink-400 text-center px-4 sm:px-10 md:px-20 mt-5">
         Build scalable and reliable web applications from stable backend and frontend libraries and frameworks that work and generate revenue for you!
       </p>
 
