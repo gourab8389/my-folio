@@ -37,14 +37,14 @@ function ProjectForm() {
 
             if (response.ok) {
                 toast.success("Project Created");
-                router.refresh();
+                router.push("/allProjects");
             } else {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to create the project");
             }
         } catch (error) {
             console.error("Error:", error);
-            toast.error( "Failed to create project");
+            toast.error("Failed to create project");
         }
     };
 

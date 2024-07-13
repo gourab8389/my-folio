@@ -1,19 +1,29 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, model, models } from "mongoose";
 
-
-const projectSchema = new Schema(
-    {
-        title:String,
-        description:String,
-        imageUrl:String,
-        link:String,
-        gitLink: String,
-
+const projectSchema = new Schema({
+    title: {
+        type: String,
+        required: true
     },
-    {
-        timestamps: true,
+    description: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
+        type: String,
+        required: true
+    },
+    gitLink: {
+        type: String,
+        required: true
+    },
+    link: {
+        type: String,
+        required: true
     }
-)
+}, { timestamps: true });
 
-const Project = mongoose.model("Project", projectSchema);
+
+const Project = models.Project || model("Project", projectSchema);
+
 export default Project;
