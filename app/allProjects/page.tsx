@@ -65,7 +65,7 @@ const allProjects: React.FC = () => {
         </Link>
       </div>
 
-      <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">
+      <div id="projects" className="px-6 md:px-12 lg:px-24 py-12 mt-5">
         <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 dark:to-slate-600 mb-8">
           All of My Projects
         </p>
