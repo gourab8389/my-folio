@@ -93,7 +93,7 @@ export const navItems = [
       description: "Game hub, my first Next.js website",
       imageUrl: "/soloplay.png",
       link: "https://game-hub.exions.xyz/",
-      gitLink: "",
+      gitLink: "https://github.com/gourab8389/game_hub",
     },
     {
       id: 5,
