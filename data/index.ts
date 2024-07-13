@@ -70,6 +70,7 @@ export const navItems = [
       img: "/AI-content1.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg", "/fm.svg"],
       link: "https://quill-ai-bz5w.vercel.app/",
+      gitLink: "",
     },
     {
       id: 2,
@@ -78,14 +79,16 @@ export const navItems = [
       img: "/eventsy.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg"],
       link: "https://eventsy.exions.xyz",
+      gitLink: "",
     },
     {
       id: 3,
       title: "Imaginify",
-      des: "A real software service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
+      des: "A real software service app with AI features and a payments system using.",
+      img: "/eventsy1.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
       link: "https://imaginify.exions.xyz/",
+      gitLink: "",
     },
     {
       id: 4,
@@ -94,6 +97,7 @@ export const navItems = [
       img: "/soloplay.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
       link: "https://game-hub.exions.xyz/",
+      gitLink: "",
     },
     {
       id: 5,
@@ -102,6 +106,7 @@ export const navItems = [
       img: "/travel.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
       link: "https://travel-web.exions.xyz/",
+      gitLink: "",
     },
     {
       id: 6,
@@ -110,6 +115,7 @@ export const navItems = [
       img: "/search-engine.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
       link: "https://search-engine-a26m.vercel.app/",
+      gitLink: "",
     },
   ];
 

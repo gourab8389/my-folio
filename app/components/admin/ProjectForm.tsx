@@ -31,6 +31,10 @@ function ProjectForm() {
               <Input id="link" type='text' />
             </div>
             <div className="space-y-1">
+              <Label htmlFor="githublink">Github Link</Label>
+              <Input id="githublink" type='text' />
+            </div>
+            <div className="space-y-1">
               <Label htmlFor="image">Image Url</Label>
               <Input id="image" type='text'/>
             </div>

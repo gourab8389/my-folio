@@ -1,5 +1,6 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/3d-card";
+import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export function Projects() {
       <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 mb-8">
         Some of My Projects
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto bg-blue-300">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projects.map((item) => (
           <CardContainer key={item.id} className="inter-var" containerClassName="p-4">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border">
@@ -42,7 +43,7 @@ export function Projects() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="https://github.com/mannupaaji"
+                  href={item.gitLink}
                   target="__blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
@@ -61,6 +62,11 @@ export function Projects() {
           </CardContainer>
         ))}
       </div>
+      <Link href={'allProjects'}>      
+      <div className="flex items-center ml-[23rem]">
+        <Button>See all Projects</Button>
+      </div>
+      </Link>
     </div>
   );
 }
