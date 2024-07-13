@@ -10,6 +10,7 @@ export function Skills() {
         My Skills
       </p>
       <HoverEffect items={skills} />
+      
     </div>
   );
 }

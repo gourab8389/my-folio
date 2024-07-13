@@ -3,8 +3,8 @@ import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area"; // Ensure you have this component
-
+import { ScrollArea } from "@/components/ui/scroll-area"; 
+import { Meteors } from "./meteors";
 export const HoverEffect = ({
   items,
   className,
@@ -85,7 +85,9 @@ export const Card = ({
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-4">{children}
+        <Meteors number={50} />
+        </div>
       </div>
     </div>
   );
