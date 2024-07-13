@@ -1,9 +1,9 @@
-"use client"
+// HoverEffect component
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { Meteors } from "./meteors";
+import { ScrollArea } from "@/components/ui/scroll-area"; // Ensure you have this component
 
 export const HoverEffect = ({
   items,
@@ -11,8 +11,7 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    description: string;
-    link: string;
+    list: string[];
   }[];
   className?: string;
 }) => {
@@ -21,22 +20,21 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6",
         className
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={`${item?.link}-${idx}`} 
-          className="relative group  block p-2 h-full w-full"
+        <div
+          key={`${item.title}-${idx}`}
+          className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -52,14 +50,25 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardDescription>
+              <ScrollArea className="h-36 w-full rounded-md border p-2">
+                <div className="space-y-2">
+                  {item.list.map((skill, i) => (
+                    <div key={i} className="text-sm">
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </ScrollArea>
+            </CardDescription>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
 };
 
+// Card component
 export const Card = ({
   className,
   children,
@@ -70,18 +79,19 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        "bg-gray-100 dark:bg-gray-900",
+        "rounded-2xl h-full w-full p-8 overflow-hidden border border-gray-300 dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "bg-gray-100 dark:bg-black",
         className
       )}
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
-        <Meteors number={20} />
       </div>
     </div>
   );
 };
+
+// CardTitle component
 export const CardTitle = ({
   className,
   children,
@@ -90,11 +100,13 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn(" font-bold tracking-wide mt-4","dark:text-zinc-100 text-black", className)}>
+    <h4 className={cn("font-bold tracking-wide mt-4", "dark:text-zinc-100 text-black", className)}>
       {children}
     </h4>
   );
 };
+
+// CardDescription component
 export const CardDescription = ({
   className,
   children,
@@ -103,13 +115,13 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p
+    <div
       className={cn(
-        "mt-8 dark:text-zinc-400 text-zinc-900 tracking-wide leading-relaxed text-sm",
+        "mt-4 dark:text-zinc-400 text-zinc-900 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
       {children}
-    </p>
+    </div>
   );
 };

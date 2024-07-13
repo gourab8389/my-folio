@@ -117,23 +117,40 @@ export const navItems = [
 
   export const skills = [
     {
-      title: "Stripe",
-      description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "",
+      title: "Frontend",
+      list: [
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Material-UI",
+        "Styled-components",
+        "Context API",
+        "Axios",
+        "GitHub",
+      ],
     },
     {
-      title: "Netflix",
-      description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "",
+      title: "Backend",
+      list: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "Firebase",
+        "JWT (JSON Web Tokens)",
+        "OAuth2",
+        "Sentry",
+      ],
     },
     {
-      title: "Google",
-      description:
-        "A multinational technology company that specializes in Internet-related services and products.",
-      link: "",
-    }
+      title: "Others",
+      list: [
+        "DSA in C",
+        "Oops in Java",
+        "DBMS",
+        "OS",
+        "DAA",
+      ],
+    },
   ];
-
 
