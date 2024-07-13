@@ -68,34 +68,30 @@ export const navItems = [
       title: "AI Content Generator",
       description: "Generate high-quality content on more than 50 topics effortlessly",
       imageUrl: "/AI-content1.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg", "/fm.svg"],
       link: "https://quill-ai-bz5w.vercel.app/",
-      gitLink: "",
+      gitLink: "https://github.com/gourab8389/QuillAI",
     },
     {
       id: 2,
       title: "Eventsy",
       description: "Eventsy, Join with us and create your event and explore to all.",
       imageUrl: "/eventsy.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg"],
       link: "https://eventsy.exions.xyz",
-      gitLink: "",
+      gitLink: "https://github.com/gourab8389/eventsy",
     },
     {
       id: 3,
       title: "Imaginify",
       description: "A real software service app with AI features and a payments system using.",
       imageUrl: "/eventsy1.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
       link: "https://imaginify.exions.xyz/",
-      gitLink: "",
+      gitLink: "https://github.com/gourab8389/Imaginify",
     },
     {
       id: 4,
       title: "Soloplay",
       description: "Game hub, my first Next.js website",
       imageUrl: "/soloplay.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
       link: "https://game-hub.exions.xyz/",
       gitLink: "",
     },
@@ -104,18 +100,16 @@ export const navItems = [
       title: "Travel-Web",
       description: "Connect to your destination",
       imageUrl: "/travel.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
       link: "https://travel-web.exions.xyz/",
-      gitLink: "",
+      gitLink: "https://github.com/gourab8389/travel-web",
     },
     {
       id: 6,
       title: "Search-Ingine",
       description: "AI-image search ingine",
       imageUrl: "/search-engine.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
       link: "https://search-engine-a26m.vercel.app/",
-      gitLink: "",
+      gitLink: "https://github.com/gourab8389/search-engine",
     },
   ];
 
@@ -141,6 +135,5 @@ export const navItems = [
       link: "",
     }
   ];
-
 
 
