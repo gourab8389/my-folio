@@ -1,8 +1,6 @@
 "use client"
 import { CardBody, CardContainer, CardItem } from '@/components/3d-card'
 import { ModeToggle } from '@/components/toggleMode'
-import { Button } from '@/components/ui/button'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -62,7 +60,9 @@ const allProjects: React.FC = () => {
         <ModeToggle />
       </div>
       <div className="absolute top-0 right-5 flex mr-5 mt-5">
-        <button className=''>Back</button>
+        <Link href={'/'}>
+          <button className='bg-gradient-to-br from-gray-300 to-blue-300 border border-black text-black dark:text-white flex items-center space-x-2 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-300 hover:to-gray-300 hover:shadow-lg p-2 rounded-lg lg:ml-40 ml-[6rem] font-bold'>Back</button>
+        </Link>
       </div>
 
       <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">

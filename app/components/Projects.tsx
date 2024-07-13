@@ -66,7 +66,7 @@ export function Projects() {
       <div className="">
         <Link href={'/allProjects'}>
           <div className="flex items-center justify-center lg:justify-start lg:ml-[27rem] mt-8 lg:mt-0">
-            <Button>See all Projects</Button>
+            <Button className="bg-gradient-to-br from-gray-300 to-blue-300 border border-black text-black dark:text-purple-700 flex items-center space-x-2 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-300 hover:to-gray-300 hover:shadow-lg font-bold">See all Projects</Button>
           </div>
         </Link>
       </div>

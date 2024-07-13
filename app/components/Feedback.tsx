@@ -34,7 +34,7 @@ export function Feedback() {
           <Input id="description" placeholder="feedback" type="text" name="description" />
         </LabelInputContainer>
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-        <Button type="submit" className="bg-gradient-to-br from-gray-300 to-blue-300 border border-black text-black dark:text-white flex items-center space-x-2 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-300 hover:to-gray-300 hover:shadow-lg p-2 rounded-lg lg:ml-40 ml-[6rem]">
+        <Button type="submit" className="bg-gradient-to-br from-gray-300 to-blue-300 border border-black text-black dark:text-purple-700 font-bold flex items-center space-x-2 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-300 hover:to-gray-300 hover:shadow-lg p-2 rounded-lg lg:ml-40 ml-[6rem]">
           Send Feedback
         </Button>
       </form>
