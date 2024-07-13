@@ -31,7 +31,7 @@ export function Projects() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-3">
                 <Image
-                  src={item.image}
+                  src={item.imageUrl}
                   alt={item.title}
                   layout="responsive"
                   width={800}

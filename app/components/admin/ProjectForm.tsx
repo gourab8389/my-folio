@@ -12,7 +12,7 @@ function ProjectForm() {
   const [title, setTitle] = useState(" ");
   const [description, setDescription] = useState(" ");
   const [link, setLink] = useState(" ");
-  const [githublink, setGithublink] = useState(" ");
+  const [gitLink, setGitlink] = useState(" ");
   const [imageUrl, setImageUrl] = useState(" ");
 
   const router = useRouter()
@@ -23,7 +23,7 @@ function ProjectForm() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)=>{
       e.preventDefault();
 
-      if(!title || !description || !link || !githublink || !imageUrl){
+      if(!title || !description || !link || !gitLink || !imageUrl){
         alert("Some thing you missed to fill.")
       }
       
@@ -53,7 +53,7 @@ function ProjectForm() {
             </div>
             <div className="space-y-1">
               <Label htmlFor="githublink">Github Link</Label>
-              <Input onChange={(e) =>setGithublink(e.target.value)} value = {githublink} placeholder='Github Link' type='text' />
+              <Input onChange={(e) =>setGitlink(e.target.value)} value = {gitLink} placeholder='Github Link' type='text' />
             </div>
             <div className="space-y-1">
               <Label htmlFor="imageUrl">Image Url</Label>
