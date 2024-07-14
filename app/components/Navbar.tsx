@@ -1,40 +1,37 @@
-import { ModeToggle } from "@/components/toggleMode";
-import {
-    Menubar,
-    MenubarContent,
-    MenubarItem,
-    MenubarMenu,
-    MenubarSeparator,
-    MenubarShortcut,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
-    MenubarTrigger,
-  } from "@/components/ui/menubar";
-import { navItems } from "@/data";
-import Link from "next/link";
-import { FcMenu } from "react-icons/fc";
+"use client"
+import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/navbar-menu";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+
   
   
-  export function Navbar () {
-    return (
-      <Menubar>
-        <MenubarMenu>
-          <MenubarTrigger><FcMenu /></MenubarTrigger>
-          <MenubarContent>
-              {navItems.map((item)=>(
-            <Link href={item.link}>
-            <MenubarItem>
-                {item.name}
-            </MenubarItem>
-            </Link>
-              ))}
-              <MenubarItem>
-                <ModeToggle/>
-              </MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-      </Menubar>
-    )
-  }
+export function Navbar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
+  return (
+    <div
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+    >
+      <Menu setActive={setActive}>
+        <MenuItem setActive={setActive} active={active} item="Services">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">Web Development</HoveredLink>
+            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
+            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+            <HoveredLink href="/branding">Branding</HoveredLink>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Products">
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Pricing">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/hobby">Hobby</HoveredLink>
+            <HoveredLink href="/individual">Individual</HoveredLink>
+            <HoveredLink href="/team">Team</HoveredLink>
+            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+          </div>
+        </MenuItem>
+      </Menu>
+    </div>
+  );
+}
   

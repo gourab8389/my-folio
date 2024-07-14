@@ -1,13 +1,11 @@
-import About from "./components/About";
 import { Navbar } from "./components/Navbar";
-import { FloatingNav } from "@/components/FloatingNav";
-import { navItems } from "@/data";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Feedback } from "./components/Feedback";
 import Footer from "./components/Footer";
 import { Experiences } from "./components/Experiences";
 import { Spotlight } from "@/components/Spotlight";
+import Hero from "./components/Hero";
 
 
 export default function Home() {
@@ -21,8 +19,8 @@ export default function Home() {
         <Navbar />
       </div>
       <div className="flex flex-col items-center justify-center mt-5 mb-10">
-      <FloatingNav navItems={navItems}/>
-        <About />
+      {/* <FloatingNav navItems={navItems}/> */}
+        <Hero />
         <Skills/>
         <Experiences/>
         <Projects/>

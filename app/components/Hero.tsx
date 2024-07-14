@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
 
-const About = () => {
+const Hero = () => {
   return (
-    <div id='#about' className='py-48 px-7'>
+    <div id='#hero' className='py-48 px-7'>
       <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-400 dark:from-blue-300 to-slate-800 dark:to-neutral-300 text-center">
       Hi, Gourab here
       a fullstack web developer.
@@ -31,4 +31,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Hero
