@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/toggleMode";
 import About from "./components/About";
 import { Navbar } from "./components/Navbar";
 import { FloatingNav } from "@/components/FloatingNav";

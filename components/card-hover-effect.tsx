@@ -3,7 +3,7 @@ import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area"; 
+ 
 import { Meteors } from "./meteors";
 export const HoverEffect = ({
   items,
@@ -51,15 +51,13 @@ export const HoverEffect = ({
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>
-              <ScrollArea className="h-36 w-full rounded-md border p-2">
-                <div className="space-y-2">
+                <div className="space-y-2 bg-blue-200">
                   {item.list.map((skill, i) => (
                     <div key={i} className="text-sm">
                       {skill}
                     </div>
                   ))}
                 </div>
-              </ScrollArea>
             </CardDescription>
           </Card>
         </div>

@@ -120,7 +120,7 @@ export const navItems = [
       title: "Frontend",
       list: [
         "React.js",
-        "Next.js",
+        "/next.svg",
         "Tailwind CSS",
         "Material-UI",
         "Styled-components",
