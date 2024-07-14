@@ -1,37 +1,28 @@
 "use client"
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/navbar-menu";
+import { navItems } from "@/data";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { useState } from "react";
 
-  
-  
+
+
 export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 hidden md:block", className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+        {navItems.map((item) => (
+          <div className="">
+            <Link href={item.link}>
+              <MenuItem key={item.name} setActive={setActive} active={active} item={item.name} />
+            </Link>
+
           </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
+        ))}
       </Menu>
     </div>
   );
 }
-  
