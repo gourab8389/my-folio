@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/toggleMode";
 import {
     Menubar,
     MenubarContent,
@@ -28,6 +29,9 @@ import { FcMenu } from "react-icons/fc";
             </MenubarItem>
             </Link>
               ))}
+              <MenubarItem>
+                <ModeToggle/>
+              </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>

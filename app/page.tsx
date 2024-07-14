@@ -18,9 +18,6 @@ export default function Home() {
       <Spotlight className='-top-40 -left-10 md:left-32 md:-top-20 h-screen' fill='white' />
       <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='gray' />
       <Spotlight className='top-28 left-80 h-[80vh] w-[50vh]' fill='white' />
-      <div className="absolute top-0 left-5 flex ml-5 mt-5">
-        <ModeToggle />
-      </div>
       <div className="absolute top-0 right-5 mt-5">
         <Navbar />
       </div>
