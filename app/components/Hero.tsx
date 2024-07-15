@@ -35,8 +35,7 @@ const Hero = () => {
       </div>
 
 
-      <div className="">
-
+      <div className="flex flex-col lg:flex-row lg:ml-[23rem] lg:gap-5">
 
       <div className="flex items-center justify-center mt-5">
       <Link href={'https://github.com/gourab8389'}>
@@ -59,7 +58,7 @@ const Hero = () => {
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
-        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 w-[13rem]"
       >
         
         <span className='flex flex-row gap-1'>Resume<p>{" "}<GrResume className='mt-1'/></p></span>
