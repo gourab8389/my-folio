@@ -6,24 +6,6 @@ import { FaGithub } from 'react-icons/fa'
 import { GrResume } from "react-icons/gr";
 
 const Hero = () => {
-  const words = [
-    {
-      text: "Build scalable and reliable web",
-    },
-    {
-      text: "applications from stable backend",
-    },
-    {
-      text: "and frontend libraries and",
-    },
-    {
-      text: "frameworks that work and",
-    },
-    {
-      text: "generate revenue for you!",
-      className: "text-blue-500 dark:text-blue-500",
-    },
-  ];
   return (
     <div id='#hero' className='py-48 px-7'>
       <div className="text-4xl sm:text-7xl font-bold relative text-center">

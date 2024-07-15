@@ -35,7 +35,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-4xl sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 dark:from-blue-300 to-slate-800 dark:to-neutral-300"
+              className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 dark:from-blue-300 to-slate-800 dark:to-neutral-300"
               initial={{ opacity: 0 }} // Set initial opacity to 0
             >
               {word}{" "}
@@ -147,7 +147,7 @@ export const HeroText = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-xl sm:text-2xl md:text-3xl relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-600 dark:from-blue-400 to-pink-500 dark:to-pink-300 text-center"
+              className="text-xl sm:text-1xl md:text-2xl relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-600 dark:from-blue-400 to-pink-500 dark:to-pink-300 text-center"
               initial={{ opacity: 0 }} // Set initial opacity to 0
             >
               {word}{" "}
