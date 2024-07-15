@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
  
-import { Meteors } from "./meteors";
+
 export const HoverEffect = ({
   items,
   className,
@@ -51,7 +51,7 @@ export const HoverEffect = ({
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>
-                <div className="space-y-2 bg-blue-200">
+                <div className="space-y-2">
                   {item.list.map((skill, i) => (
                     <div key={i} className="text-sm">
                       {skill}
@@ -84,7 +84,7 @@ export const Card = ({
     >
       <div className="relative z-50">
         <div className="p-4">{children}
-        <Meteors number={50} />
+
         </div>
       </div>
     </div>
