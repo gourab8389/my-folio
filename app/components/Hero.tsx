@@ -12,7 +12,7 @@ const Hero = () => {
       <TextGenerateEffect words='Hi, Gourab here
       a fullstack web developer.' />
       </div>
-      <div className=" text-center px-4 sm:px-10 md:px-20 mt-5">
+      <div className=" text-center px-6 sm:px-12 md:px-20 mt-5">
         <HeroText words='Build scalable and reliable web applications from stable backend and frontend libraries and frameworks that work and generate revenue for you!'/>
       </div>
 
