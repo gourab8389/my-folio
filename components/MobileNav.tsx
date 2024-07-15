@@ -24,7 +24,7 @@ const MobileNavbar = () => {
                 <div className="mt-10">
                 {navItems.map((item) => (
                     <Link href={item.link}>
-                        <div className="my-2 items-center bg-slate-950 border border-black hover:bg-gray-900 rounded-md py-2 w-40 mx-[3rem]">
+                        <div className="my-2 items-center dark:bg-slate-950 border border-black dark:hover:bg-gray-900 hover:bg-slate-200 rounded-md py-2 w-40 mx-[3rem]">
                         <SheetHeader>
                             <SheetTitle>{item.name}</SheetTitle>
                         </SheetHeader>
