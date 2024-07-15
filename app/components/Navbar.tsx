@@ -16,7 +16,7 @@ export function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         {navItems.map((item) => (
           <div className="">
-            <Link href={item.link}>
+            <Link key={item.name} href={item.link}>
               <MenuItem key={item.name} setActive={setActive} active={active} item={item.name} />
             </Link>
 
