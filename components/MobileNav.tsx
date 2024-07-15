@@ -1,9 +1,6 @@
 import {
     Sheet,
-    SheetClose,
     SheetContent,
-    SheetDescription,
-    SheetFooter,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -12,6 +9,7 @@ import { Button } from "./ui/button";
 import { navItems } from "@/data";
 import Link from "next/link";
 import { ModeToggle } from "./toggleMode";
+import { FiMenu } from "react-icons/fi";
 
 
 const MobileNavbar = () => {
@@ -20,7 +18,7 @@ const MobileNavbar = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline">Open</Button>
+                <Button variant="outline"><FiMenu /></Button>
             </SheetTrigger>
             <SheetContent>
                 <div className="mt-10">
