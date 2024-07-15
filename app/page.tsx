@@ -7,6 +7,7 @@ import { Experiences } from "./components/Experiences";
 import { Spotlight } from "@/components/Spotlight";
 import Hero from "./components/Hero";
 import MobileNavbar from "@/components/MobileNav";
+import AboutMe from "./components/AboutMe";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center mt-5 mb-10">
         {/* <FloatingNav navItems={navItems}/> */}
         <Hero />
+        <AboutMe/>
         <Skills />
         <Experiences />
         <Projects />
