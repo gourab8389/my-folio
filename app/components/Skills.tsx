@@ -1,7 +1,7 @@
 "use client";
 import { HoverEffect } from "@/components/card-hover-effect";
-import { ScrollArea } from "@/components/ui/scroll-area"; 
 import { skills } from "@/data";
+
 
 export function Skills() {
   return (
