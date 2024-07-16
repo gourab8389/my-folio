@@ -152,7 +152,7 @@ export const navItems = [
     {
         id: 7,
         name: "PostgreSQL",
-        image: "postgresql.svg"
+        image: "postgresql1.svg"
     },
     {
         id: 8,
@@ -188,6 +188,11 @@ export const navItems = [
         id: 14,
         name: "Github",
         image: "github1.svg"
+    },
+    {
+        id: 15,
+        name: "Clerk",
+        image: "	https://authenticator.2stable.com/assets/img/2fa-services/Icons/clerk.com.svg"
     },
 ];
 

@@ -10,7 +10,7 @@ const AboutMe = () => {
                 About Me
             </p>
 
-            <div className="flex flex-col lg:flex-row w-[25rem] lg:w-[60rem] p-4 lg:p-16 h-[40rem] lg:h-[30rem] items-center justify-center gap-5">
+            <div className="flex flex-col lg:flex-row w-[25rem] lg:w-[60rem] p-4 lg:p-16 h-[40rem] lg:h-[27rem] items-center justify-center gap-5">
                 <div className="flex mt-1 lg:ml-2 rounded-lg">
                     <Image src={'/profileImg.png'} alt={'me'} height={200} width={200} className='rounded' />
                 </div>
