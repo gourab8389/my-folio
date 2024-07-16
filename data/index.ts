@@ -122,72 +122,72 @@ export const navItems = [
     {
         id: 1,
         name: "React.js",
-        image: "https://via.placeholder.com/150"
+        image: "react.svg"
     },
     {
         id: 2,
         name: "Next.js",
-        image: "https://via.placeholder.com/150"
+        image: "next.svg"
     },
     {
         id: 3,
         name: "Tailwind CSS",
-        image: "https://via.placeholder.com/150"
+        image: "tail.svg"
     },
     {
         id: 4,
         name: "Node.js",
-        image: "https://via.placeholder.com/150"
+        image: "nodejs.svg"
     },
     {
         id: 5,
-        name: "Express.js",
-        image: "https://via.placeholder.com/150"
+        name: "Vercel",
+        image: "vercel.svg"
     },
     {
         id: 6,
         name: "MongoDB",
-        image: "https://via.placeholder.com/150"
+        image: "mongodb.svg"
     },
     {
         id: 7,
         name: "PostgreSQL",
-        image: "https://via.placeholder.com/150"
+        image: "postgresql.svg"
     },
     {
         id: 8,
         name: "MySQL",
-        image: "https://via.placeholder.com/150"
+        image: "mysql.svg"
     },
     {
         id: 9,
         name: "TypeScript",
-        image: "https://via.placeholder.com/150"
+        image: "typescript.svg"
     },
     {
         id: 10,
         name: "JavaScript",
-        image: "https://via.placeholder.com/150"
+        image: "javascript.svg"
     },
     {
         id: 11,
         name: "HTML5",
-        image: "https://via.placeholder.com/150"
+        image: "html.svg"
     },
     {
         id: 12,
         name: "CSS3",
-        image: "https://via.placeholder.com/150"
+        image: "css.svg"
     },
     {
         id: 13,
         name: "Prisma",
-        image: "https://via.placeholder.com/150"
+        image: "light-prisma.svg"
     },
     {
         id: 14,
-        name: "Git",
-        image: "https://via.placeholder.com/150"
+        name: "Github",
+        image: "github1.svg"
     },
 ];
 
