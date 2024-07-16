@@ -120,42 +120,77 @@ export const navItems = [
 
   export const skills = [
     {
-      title: "Frontend",
-      list: [
-        "React.js",
-        "/next.svg",
-        "Tailwind CSS",
-        "Material-UI",
-        "Styled-components",
-        "Context API",
-        "Axios",
-        "GitHub",
-      ],
+        id: 1,
+        name: "React.js",
+        image: "https://via.placeholder.com/150"
     },
     {
-      title: "Backend",
-      list: [
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "PostgreSQL",
-        "Firebase",
-        "JWT (JSON Web Tokens)",
-        "OAuth2",
-        "Sentry",
-      ],
+        id: 2,
+        name: "Next.js",
+        image: "https://via.placeholder.com/150"
     },
     {
-      title: "Others",
-      list: [
-        "DSA in C",
-        "Oops in Java",
-        "DBMS",
-        "OS",
-        "DAA",
-      ],
+        id: 3,
+        name: "Tailwind CSS",
+        image: "https://via.placeholder.com/150"
     },
-  ];
+    {
+        id: 4,
+        name: "Node.js",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 5,
+        name: "Express.js",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 6,
+        name: "MongoDB",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 7,
+        name: "PostgreSQL",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 8,
+        name: "MySQL",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 9,
+        name: "TypeScript",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 10,
+        name: "JavaScript",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 11,
+        name: "HTML5",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 12,
+        name: "CSS3",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 13,
+        name: "Prisma",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 14,
+        name: "Git",
+        image: "https://via.placeholder.com/150"
+    },
+];
+
 
 
   
