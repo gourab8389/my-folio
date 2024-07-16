@@ -16,7 +16,7 @@ export function Button({
   children,
   as: Component = "button",
   containerClassName,
-  borderClassName,
+  
   duration,
   className,
   ...otherProps
@@ -25,7 +25,7 @@ export function Button({
   children: React.ReactNode;
   as?: any;
   containerClassName?: string;
-  borderClassName?: string;
+  
   duration?: number;
   className?: string;
   [key: string]: any;
@@ -33,7 +33,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
+        " relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
         containerClassName
       )}
       style={{
@@ -49,7 +49,7 @@ export function Button({
           <div
             className={cn(
               "h-20 w-20 opacity-[0.8] bg-[radial-gradient(#60a5fa_40%,transparent_60%)] dark:bg-[radial-gradient(#3b82f6_40%,transparent_60%)]",
-              borderClassName
+              
             )}
           />
         </MovingBorder>
@@ -57,7 +57,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-slate-900/[0.] border backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
           className
         )}
         style={{
