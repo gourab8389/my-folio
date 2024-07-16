@@ -5,11 +5,10 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { Button } from "./ui/button";
 import { navItems } from "@/data";
 import Link from "next/link";
 import { ModeToggle } from "./toggleMode";
-import { FiMenu } from "react-icons/fi";
+import { TiThMenu } from "react-icons/ti";
 
 
 const MobileNavbar = () => {
@@ -18,7 +17,7 @@ const MobileNavbar = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline"><FiMenu /></Button>
+                <button className=""><TiThMenu /></button>
             </SheetTrigger>
             <SheetContent>
                 <div className="mt-10">
