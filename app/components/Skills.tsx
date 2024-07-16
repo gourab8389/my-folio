@@ -14,3 +14,5 @@ export function Skills() {
     </div>
   );
 }
+
+// https://azimov.xyz/svgs/clerk.svg
