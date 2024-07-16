@@ -127,7 +127,7 @@ export const navItems = [
     {
         id: 2,
         name: "Next.js",
-        image: "next.svg"
+        image: "/nextjs5.png"
     },
     {
         id: 3,
@@ -187,7 +187,7 @@ export const navItems = [
     {
         id: 14,
         name: "Github",
-        image: "github1.svg"
+        image: "github5.svg"
     },
     {
         id: 15,
