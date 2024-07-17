@@ -13,7 +13,7 @@ import { cn } from "@/utils/cn";
 export function Button({
   borderRadius = "1.25rem",
   children,
-  as: Component = "button",
+  as: Component = "div",
   containerClassName,
   duration,
   className,
@@ -39,7 +39,7 @@ export function Button({
       {...otherProps}
     >
       <div
-        className="absolute inset-0 rounded-[1.75rem]"
+        className="absolute inset-0 rounded-[1rem]"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./providers";
 import { Toaster } from "@/components/ui/sonner";
 import { ModeToggle } from "@/components/toggleMode";
+import MobileNavbar from "@/components/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="fixed top-5 right-2 block lg:hidden">
+            <MobileNavbar />
+          </div>
           {children}
           <Toaster />
           <div className="fixed left-3  lg:top-[30rem] hidden md:block">

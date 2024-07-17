@@ -20,13 +20,10 @@ export function Experiences() {
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
-            style={{
-              background: "#f6f8f6",
-              borderRadius: `calc(1.75rem * 0.96)`,
-            }}
-            className="flex-1 text-black dark:text-white dark:bg-black"
+            containerClassName="dark:bg-black bg-[#f6f8f6]" 
+            className="flex-1 text-black dark:text-white"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2 w-[23rem]">
+            <div className="flex lg:flex-row flex-col lg:items-center p-4 py-6 md:p-5 lg:p-10 gap-2 w-[26rem] lg:w-[26rem]">
               <img
                 src={card.thumbnail}
                 alt={card.title}

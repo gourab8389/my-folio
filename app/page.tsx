@@ -19,10 +19,11 @@ export default function Home() {
       <div className="absolute top-0 right-5 mt-5">
         <Navbar />
       </div>
+
+      <div className="flex flex-col items-center justify-center gap-10 mb-10">
       <div className="fixed top-5 right-2 block lg:hidden">
         <MobileNavbar />
       </div>
-      <div className="flex flex-col items-center justify-center gap-10 mb-10">
         {/* <FloatingNav navItems={navItems}/> */}
         <Hero />
         <AboutMe/>

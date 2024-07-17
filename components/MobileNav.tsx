@@ -17,7 +17,7 @@ const MobileNavbar = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <button className=""><TiThMenu /></button>
+                <button className=""><TiThMenu className="h-5 w-5"/></button>
             </SheetTrigger>
             <SheetContent>
                 <div className="mt-10">
