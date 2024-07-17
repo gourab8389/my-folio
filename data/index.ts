@@ -162,12 +162,12 @@ export const navItems = [
     {
         id: 9,
         name: "TypeScript",
-        image: "typescript.svg"
+        image: "typescript5.svg"
     },
     {
         id: 10,
         name: "JavaScript",
-        image: "javascript.svg"
+        image: "javascript5.svg"
     },
     {
         id: 11,
@@ -197,7 +197,7 @@ export const navItems = [
     {
         id: 16,
         name: "Shadcn UI",
-        image: "	https://seeklogo.com/images/S/shadcn-ui-logo-EF735EC0E5-seeklogo.com.png?v=638421451470000000"
+        image: "shadcn.svg"
     },
 ];
 
