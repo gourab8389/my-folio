@@ -2,10 +2,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/input";
-import { Label } from "@/components/label";
-import { Button } from "@/components/ui/button";
-import { Spotlight } from "@/components/Spotlight";
-import { SparklesCore } from "@/components/sparkles";
+import { Label } from "@/components/label";;
 import { HoverBorderGradient } from "@/components/hover-border-gradient";
 
 export function Feedback() {
