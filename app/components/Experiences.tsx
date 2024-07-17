@@ -22,7 +22,7 @@ export function Experiences() {
             borderRadius="1.75rem"
             style={{
               background: "#f6f8f6",
-              borderRadius: `calc(1.75rem* 0.96)`,
+              borderRadius: `calc(1.75rem * 0.96)`,
             }}
             className="flex-1 text-black dark:text-white dark:bg-black"
           >

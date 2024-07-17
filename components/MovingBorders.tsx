@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import {
@@ -12,11 +11,10 @@ import { useRef } from "react";
 import { cn } from "@/utils/cn";
 
 export function Button({
-  borderRadius = "1.75rem",
+  borderRadius = "1.25rem",
   children,
   as: Component = "button",
   containerClassName,
-  
   duration,
   className,
   ...otherProps
@@ -25,7 +23,6 @@ export function Button({
   children: React.ReactNode;
   as?: any;
   containerClassName?: string;
-  
   duration?: number;
   className?: string;
   [key: string]: any;
@@ -33,7 +30,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        " relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
+        "relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
         containerClassName
       )}
       style={{
@@ -48,8 +45,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(#60a5fa_40%,transparent_60%)] dark:bg-[radial-gradient(#3b82f6_40%,transparent_60%)]",
-              
+              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(#60a5fa_40%,transparent_60%)] dark:bg-[radial-gradient(#60a5fa_40%,transparent_60%)]",
             )}
           />
         </MovingBorder>
@@ -57,11 +53,12 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.] border backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative  flex items-center justify-center w-full h-full text-sm antialiased",
           className
         )}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
+          border: "none", // Add this line to remove the border
         }}
       >
         {children}
