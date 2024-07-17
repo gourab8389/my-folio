@@ -194,6 +194,11 @@ export const navItems = [
         name: "Clerk",
         image: "	https://authenticator.2stable.com/assets/img/2fa-services/Icons/clerk.com.svg"
     },
+    {
+        id: 16,
+        name: "Shadcn UI",
+        image: "	https://seeklogo.com/images/S/shadcn-ui-logo-EF735EC0E5-seeklogo.com.png?v=638421451470000000"
+    },
 ];
 
 

@@ -10,11 +10,11 @@ export function Skills() {
       <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-600">
         My Skills
       </p>
-      <div className="grid lg:grid-cols-5 grid-cols-2 gap-4 w-full lg:w-4/5 mx-auto my-[3rem]">
+      <div className="grid lg:grid-cols-6 grid-cols-2 gap-4 w-full lg:w-4/5 mx-auto my-[3rem]">
         {skills.map((item) => (
           <div className="">
               
-          <div key={item.id} className="flex gap-4 p-4 rounded-full lg:rounded-lg  items-center bg-gray-50 dark:bg-black shadow-md hover:bg-slate-100 dark:hover:bg-slate-950">
+          <div key={item.id} className="flex gap-4 p-4 rounded-full lg:rounded-lg  items-center bg-gray-50 dark:bg-black shadow-md hover:bg-slate-100 dark:hover:bg-slate-950 border dark:border-gray-950">
             <SkillDataProvider 
             key={item.id}
               src={item.image} 
@@ -23,7 +23,7 @@ export function Skills() {
               index={item.id} 
               className={"rounded-full"} 
             />
-            <span className="text-sm lg:text-md font-semibold text-black dark:text-white">{item.name}</span>
+            <span className="text-xs lg:text-md font-semibold text-black dark:text-white">{item.name}</span>
           </div>
           </div>
         ))}
