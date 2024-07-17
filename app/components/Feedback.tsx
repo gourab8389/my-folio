@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Input } from "@/components/input";
 import { Label } from "@/components/label";;
 import { HoverBorderGradient } from "@/components/hover-border-gradient";
+import { Textarea } from "@/components/ui/textarea";
 
 export function Feedback() {
   return (
@@ -27,14 +28,17 @@ export function Feedback() {
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="xyz@fc.com" type="email" name="email" />
         </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="description">Feedback</Label>
-          <Input id="description" placeholder="feedback" type="text" name="description" />
+        <Label htmlFor="feedback">Feed back</Label>
+        <Textarea placeholder="Type your message here." itemType="text" name="feedback" className="mb-4" />
         </LabelInputContainer>
+
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
         <HoverBorderGradient
         containerClassName=" flex rounded-md ml-[6rem] lg:ml-[8rem]"
         as="button"
+        itemType="submit"
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 text-center"
       >
         
