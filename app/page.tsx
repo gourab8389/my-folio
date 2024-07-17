@@ -20,10 +20,10 @@ export default function Home() {
         <Navbar />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-10 mb-10">
-      <div className="fixed top-5 right-2 block lg:hidden">
+      <div className="fixed top-5 right-4 block lg:hidden z-50">
         <MobileNavbar />
       </div>
+      <div className="flex flex-col items-center justify-center gap-10 mb-10">
         {/* <FloatingNav navItems={navItems}/> */}
         <Hero />
         <AboutMe/>
