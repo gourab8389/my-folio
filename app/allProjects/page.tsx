@@ -1,5 +1,6 @@
 "use client"
 import { CardBody, CardContainer, CardItem } from '@/components/3d-card'
+import { HoverBorderGradient } from '@/components/hover-border-gradient'
 import { ModeToggle } from '@/components/toggleMode'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -53,15 +54,19 @@ const allProjects: React.FC = () => {
   return (
 
 
-    <main className="relative flex flex-col overflow-clip h-auto lg:h-auto w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.5]">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-700 bg-gray-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+    <main className="relative flex flex-col overflow-clip h-auto w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+      <div className="absolute flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
 
-      <div className="absolute top-0 left-5 flex ml-5 mt-5">
-        <ModeToggle />
-      </div>
       <div className="absolute top-0 right-5 flex mr-5 mt-5">
         <Link href={'/'}>
-          <button className='bg-gradient-to-br from-gray-300 to-blue-300 border border-black text-black dark:text-white flex items-center space-x-2 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-300 hover:to-gray-300 hover:shadow-lg p-2 rounded-lg lg:ml-40 ml-[6rem] font-bold'>Back</button>
+        <HoverBorderGradient
+        containerClassName="rounded-full"
+        as="button"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+      >
+        
+        <span className='flex flex-row gap-1'>Back</span>
+      </HoverBorderGradient>
         </Link>
       </div>
 
