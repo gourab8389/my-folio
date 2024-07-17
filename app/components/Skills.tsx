@@ -14,7 +14,7 @@ export function Skills() {
         {skills.map((item) => (
           <div className="">
               
-          <div key={item.id} className="flex gap-4 p-4 rounded-full lg:rounded-lg  items-center bg-white dark:bg-black shadow-md hover:bg-slate-100 dark:hover:bg-slate-950">
+          <div key={item.id} className="flex gap-4 p-4 rounded-full lg:rounded-lg  items-center bg-gray-50 dark:bg-black shadow-md hover:bg-slate-100 dark:hover:bg-slate-950">
             <SkillDataProvider 
             key={item.id}
               src={item.image} 

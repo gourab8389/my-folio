@@ -20,7 +20,7 @@ export function Experiences() {
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
-            containerClassName="dark:bg-black bg-[#f6f8f6]" 
+            containerClassName="dark:bg-black bg-gray-50" 
             className="flex-1 text-black dark:text-white drop-shadow-lg"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-4 py-6 md:p-5 lg:p-10 gap-2 w-[25rem] lg:w-[26rem]">
