@@ -21,7 +21,7 @@ export function Skills() {
               width={30} 
               height={30} 
               index={item.id} 
-              className={"rounded-full"} 
+              className={"rounded-full bg-white border border-white"} 
             />
             <span className="text-xs lg:text-md font-semibold text-black dark:text-white">{item.name}</span>
           </div>
