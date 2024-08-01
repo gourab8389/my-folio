@@ -7,7 +7,7 @@ import { GrResume } from "react-icons/gr";
 
 const Hero = () => {
   return (
-    <div id='#hero' className='py-48 px-7'>
+    <div id='#hero' className='py-48 px-7 2xl:px-72 h-screen bg-red-300 items-center justify-center'>
       <div className="text-4xl sm:text-7xl font-bold relative text-center">
       <TextGenerateEffect words='Hi, Gourab here
       a fullstack web developer.' />

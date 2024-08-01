@@ -16,7 +16,7 @@ export function Projects() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-w-7xl mx-1 lg:mx-2">
         {projects.map((item) => (
           <CardContainer key={item.id} className="inter-var" containerClassName="p-5">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-slate-900 border-black/[0.1] rounded-xl p-6 border border-gray-200 shadow-md">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-slate-900 border-black/[0.1] rounded-xl p-6 border border-gray-200 shadow-md w-20">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"

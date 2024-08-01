@@ -31,7 +31,7 @@ export default function RootLayout({
 
           {children}
           <Toaster />
-          <div className="fixed left-3  lg:top-[30rem] hidden md:block">
+          <div className="fixed left-3 md:top-[26rem] lg:top-[33rem] 2xl:top-[56rem] hidden md:block">
             <ModeToggle />
           </div>
         </div>

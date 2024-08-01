@@ -87,7 +87,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-auto w-[25rem] sm:w-[20rem] md:w-[24rem] lg:w-[17rem] xl:w-[28rem] [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-auto w-[25rem] sm:w-[20rem] md:w-[20rem] [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
