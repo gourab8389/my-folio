@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./providers";
 import { Toaster } from "@/components/ui/sonner";
 import { ModeToggle } from "@/components/toggleMode";
-import MobileNavbar from "@/components/MobileNav";
+import { Spotlight } from "@/components/Spotlight";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,15 +26,19 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        ><div className="relative flex flex-col overflow-clip h-auto w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
-          <div className="absolute flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+        >
+          <div className="relative flex flex-col overflow-clip h-auto w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+            <div className="absolute flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+            <Spotlight className="-top-40 -left-10 md:left-32 md:-top-20 h-screen" fill="white" />
+            <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="gray" />
+            <Spotlight className="top-28 left-80 h-[80vh] w-[50vh]" fill="white" />
 
-          {children}
-          <Toaster />
-          <div className="fixed left-3 md:top-[26rem] lg:top-[33rem] 2xl:top-[56rem] hidden md:block">
-            <ModeToggle />
+            {children}
+            <Toaster />
+            <div className="fixed left-3 md:top-[30rem] lg:top-[33rem] 2xl:top-[56rem] hidden md:block">
+              <ModeToggle />
+            </div>
           </div>
-        </div>
         </ThemeProvider>
       </body>
     </html>

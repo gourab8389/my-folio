@@ -8,6 +8,7 @@ import { Spotlight } from "@/components/Spotlight";
 import Hero from "./components/Hero";
 import MobileNavbar from "@/components/MobileNav";
 import AboutMe from "./components/AboutMe";
+import { MaxWrapper } from "@/components/MaxWrapper";
 
 export default function Home() {
   return (
@@ -23,14 +24,15 @@ export default function Home() {
       <div className="fixed top-5 right-4 block lg:hidden z-50">
         <MobileNavbar />
       </div>
-      <div className="flex flex-col items-center justify-center gap-10 mb-10">
-        {/* <FloatingNav navItems={navItems}/> */}
-        <Hero />
-        <AboutMe/>
-        <Skills />
-        <Experiences />
-        <Projects />
-        <Feedback />
+      <div className="">
+        <MaxWrapper>
+          <Hero />
+          <AboutMe />
+          <Skills />
+          <Experiences />
+          <Projects />
+          <Feedback />
+        </MaxWrapper>
         <Footer />
       </div>
     </main>
