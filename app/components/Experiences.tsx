@@ -9,12 +9,12 @@ export function Experiences() {
   return (
     <div
       id="experiences"
-      className="h-auto rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden gap-10"
+      className="py-10 md:py-20 2xl:py-40 md:px-20 flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden gap-10"
     >
       <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-500">
         My Experiences
       </p>
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="w-full 2xl:px-10 mt-12 grid md:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
