@@ -9,14 +9,14 @@ import React from "react";
 
 export function Projects() {
   return (
-    <div id="projects" className="px-6 md:px-12 lg:px-24 py-12">
+    <div id="projects" className="md:px-16 py-20 md:py-40 flex flex-col gap-16">
       <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-neutral-500 mb-8">
         Some of My Projects
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-w-7xl mx-1 lg:mx-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-1 lg:mx-2">
         {projects.map((item) => (
-          <CardContainer key={item.id} className="inter-var" containerClassName="p-5">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-slate-900 border-black/[0.1] rounded-xl p-6 border border-gray-200 shadow-md w-20">
+          <CardContainer key={item.id} className="inter-var">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-slate-900 border-black/[0.1] rounded-xl border border-gray-200 shadow-md px-5">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -64,9 +64,8 @@ export function Projects() {
           </CardContainer>
         ))}
       </div>
-      <div className="">
+      <div className="flex items-center justify-center">
         <Link href={'/allProjects'}>
-          <div className="flex items-center justify-center lg:justify-start lg:ml-[27rem] mt-8 lg:mt-0">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
@@ -74,7 +73,6 @@ export function Projects() {
             >
               See All Projects
             </HoverBorderGradient>
-          </div>
         </Link>
       </div>
     </div>

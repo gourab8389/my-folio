@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -87,7 +86,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-auto w-[30rem] md:w-[20rem] [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "px-2 py-2 md:px-5 md:py-5 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
