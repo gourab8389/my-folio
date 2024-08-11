@@ -8,7 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function Feedback() {
   return (
-    <div id="feedback" className="lg:w-[32rem] w-[25rem]  mx-10 sm:mx-4 rounded-xl md:rounded-2xl p-3 sm:p-8 shadow-input bg-gray-50 dark:bg-black mt-10 border border-gray-200 dark:border-gray-900">
+<div className="flex items-center justify-center md:px-20 py-10">
+<div id="feedback" className="md:w-[42rem] w-full items-center justify-center flex rounded-xl md:rounded-2xl flex-col shadow-input bg-gray-50 dark:bg-black mt-10 border border-gray-200 dark:border-gray-900">
       
       <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-500 mt-5">
         Feedback
@@ -46,6 +47,7 @@ export function Feedback() {
       </HoverBorderGradient>
       </form>
     </div>
+</div>
   );
 }
 

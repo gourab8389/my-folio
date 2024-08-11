@@ -17,8 +17,8 @@ export function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         {navItems.map((item) => (
           <div className="flex items-center justify-center">
-            <Link key={item.name} href={item.link}>
-              <MenuItem key={item.name} setActive={setActive} active={active} item={item.name} />
+            <Link key={item.name} href={item.link} className="font-bold">
+              <MenuItem key={item.name} setActive={setActive} active={active} item={item.name}/>
             </Link>
           </div>
         ))}
