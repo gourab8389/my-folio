@@ -8,7 +8,6 @@ import { Spotlight } from "@/components/Spotlight";
 import Hero from "./components/Hero";
 import MobileNavbar from "@/components/MobileNav";
 import AboutMe from "./components/AboutMe";
-import { MaxWrapper } from "@/components/MaxWrapper";
 
 export default function Home() {
   return (
@@ -25,14 +24,12 @@ export default function Home() {
         <MobileNavbar />
       </div>
       <div className="">
-        <MaxWrapper>
           <Hero />
           <AboutMe />
           <Skills />
           <Experiences />
           <Projects />
           <Feedback />
-        </MaxWrapper>
         <Footer />
       </div>
     </main>
