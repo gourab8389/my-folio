@@ -36,7 +36,7 @@ export function Feedback() {
           </LabelInputContainer>
 
           <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-          <div className="flex items-center justify-center w-full bg-red-500">
+          <div className="flex items-center justify-center w-full">
           <HoverBorderGradient
             containerClassName=" rounded-md"
             as="button"

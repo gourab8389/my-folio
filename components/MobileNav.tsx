@@ -19,7 +19,7 @@ const MobileNavbar = () => {
             <SheetTrigger asChild>
                 <button className=""><TiThMenu className="h-5 w-5"/></button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent side={"left"}>
                 <div className="mt-10">
                 {navItems.map((item) => (
                     <Link href={item.link}>
