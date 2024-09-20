@@ -76,11 +76,11 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Eventsy",
-      description: "Eventsy, Join with us and create your event and explore to all.",
-      imageUrl: "/eventsy.png",
-      link: "https://eventsy.exions.xyz",
-      gitLink: "https://github.com/gourab8389/eventsy",
+      title: "JobQuest",
+      description: "Find you suitable jobs using unique filters.",
+      imageUrl: "/jobQuest.png",
+      link: "https://job-portal-xi-steel.vercel.app/",
+      gitLink: "https://github.com/gourab8389/job-portal",
     },
     {
       id: 3,
