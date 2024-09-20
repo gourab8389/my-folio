@@ -108,11 +108,11 @@ export const navItems = [
     },
     {
       id: 6,
-      title: "Search-Ingine",
-      description: "AI-image search ingine",
-      imageUrl: "/search-engine.png",
-      link: "https://search-engine-a26m.vercel.app/",
-      gitLink: "https://github.com/gourab8389/search-engine",
+      title: "Vlog-App",
+      description: "See your vlogs and explore yourself...",
+      imageUrl: "https://utfs.io/f/22nkGnxhGF5DAklaBVPcHgRJEwncGCF9D5fdZbi12SIzy0rk",
+      link: "https://vlog-web-bice.vercel.app/",
+      gitLink: "https://github.com/gourab8389/vlog-web",
     },
   ];
 
