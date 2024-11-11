@@ -92,11 +92,11 @@ export const navItems = [
     },
     {
       id: 4,
-      title: "Soloplay",
-      description: "Game hub, my first Next.js website",
-      imageUrl: "/soloplay.png",
-      link: "https://game-hub.exions.xyz/",
-      gitLink: "https://github.com/gourab8389/game_hub",
+      title: "Management Dashboard",
+      description: "A management dashboard for your business.",
+      imageUrl: "/management.png",
+      link: "https://dashboard.exions.tech/",
+      gitLink: "https://github.com/exionstech/dashboard-management",
     },
     {
       id: 5,
