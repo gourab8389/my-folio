@@ -1,5 +1,5 @@
 "use client"
-import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/navbar-menu";
+import { Menu, MenuItem } from "@/components/navbar-menu";
 import { ModeToggle } from "@/components/toggleMode";
 import { navItems } from "@/data";
 import { cn } from "@/lib/utils";
@@ -12,7 +12,7 @@ export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 hidden md:flex items-center justify-center", className)}
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 hidden lg:flex items-center justify-center", className)}
     >
       <Menu setActive={setActive}>
         {navItems.map((item) => (
