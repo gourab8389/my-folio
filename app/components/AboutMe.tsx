@@ -9,7 +9,7 @@ const AboutMe = () => {
       className="flex items-center justify-center flex-col py-20"
       id="about"
     >
-      <p className="text-3xl mt-5 lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-600">
+      <p className="text-3xl mt-6 md:mt-1 lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-600">
         About Me
       </p>
 
