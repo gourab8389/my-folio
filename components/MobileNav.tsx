@@ -8,14 +8,14 @@ import {
 import { navItems } from "@/data";
 import Link from "next/link";
 import { ModeToggle } from "./toggleMode";
-import { TiThMenu } from "react-icons/ti";
+import { MenuIcon } from "lucide-react";
 
 const MobileNavbar = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild className="flex items-center justify-center p-2 border rounded-2xl bg-slate-50">
+      <SheetTrigger asChild className="flex items-center justify-center p-2 border rounded-2xl bg-slate-50 dark:bg-slate-950 dark:border-slate-700">
         <button>
-          <TiThMenu className="size-10" />
+          <MenuIcon className="size-6 md:size-10" />
         </button>
       </SheetTrigger>
       <SheetContent side={"left"}>
@@ -25,7 +25,7 @@ const MobileNavbar = () => {
             <Link href={item.link}>
               <div className="my-2 items-center justify-center dark:bg-slate-950 border border-sky-900 dark:hover:bg-gray-900 hover:bg-slate-200 rounded-md py-2 w-40 mx-[3rem]">
                 <SheetHeader>
-                  <SheetTitle className="bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-600">{item.name}</SheetTitle>
+                  <SheetTitle className="bg-clip-text self-center text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-slate-600">{item.name}</SheetTitle>
                 </SheetHeader>
               </div>
             </Link>
