@@ -20,7 +20,7 @@ export default function Home() {
       <div className="fixed top-5 right-4 block lg:hidden z-50">
         <MobileNavbar />
       </div>
-      <div>
+      <div className="px-3">
           <Hero />
           <AboutMe />
           <Skills />
