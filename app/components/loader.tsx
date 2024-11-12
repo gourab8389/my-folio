@@ -1,14 +1,6 @@
 "use client"
+import { Loader } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-
-export const Loader = ({ className }: { className?: string }) => {
-  return (
-    <div className={cn("animate-spin relative h-6 w-6", className)}>
-      <div className="h-full w-full rounded-full border-2 border-gray-200 border-t-blue-500" />
-    </div>
-  )
-}
 
 export const PageLoader = () => {
   return (
