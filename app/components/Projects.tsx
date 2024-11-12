@@ -9,7 +9,7 @@ import React from "react";
 
 export function Projects() {
   return (
-    <div id="projects" className="md:px-16 py-20 md:py-40 flex flex-col gap-16 max-w-2xl">
+    <div id="projects" className="md:px-16 py-20 flex flex-col gap-16">
       <p className="text-3xl lg:text-6xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-blue-500 dark:from-blue-300 to-neutral-500 dark:to-neutral-500 mb-8">
         Some of My Projects
       </p>

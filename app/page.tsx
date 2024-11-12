@@ -22,7 +22,7 @@ export default function Home() {
       <div className="fixed top-5 right-4 block lg:hidden z-50">
         <MobileNavbar />
       </div>
-      <div className="px-5 md:px-10 2xl:px-10">
+      <div>
           <Hero />
           <AboutMe />
           <Skills />
