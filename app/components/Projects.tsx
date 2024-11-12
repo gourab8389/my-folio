@@ -65,7 +65,7 @@ export function Projects() {
         ))}
       </div>
       <div className="flex items-center justify-center">
-        <Link href={'/allProjects'}>
+        <Link href={'/all-projects'}>
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
