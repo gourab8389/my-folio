@@ -1,7 +1,6 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/3d-card";
 import { HoverBorderGradient } from "@/components/hover-border-gradient";
-import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
