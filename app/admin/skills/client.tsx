@@ -1,29 +1,52 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Loader } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Label } from "@/components/label";
 import EnhancedPasswordInput from "@/components/password-input";
 import { toast } from "sonner";
 import SkillContentPage from "@/app/components/admin/admin-skill-page.tsx/skill-content";
 
 const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+const AUTH_KEY = process.env.AUTH_KEY!;
 
 const ClientSkillPage = () => {
 
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Check authentication status on component mount
+  useEffect(() => {
+    const authStatus = localStorage.getItem(AUTH_KEY);
+    if (authStatus === "true") {
+      setIsAuthenticated(true);
+    }
+    setIsLoading(false);
+  }, []);
 
   const handleSubmit = () => {
     if (password === ADMIN_PASSWORD) {
       setIsAuthenticated(true);
+      // Store authentication status in localStorage
+      localStorage.setItem(AUTH_KEY, "true");
       toast.success("Successfully authenticated!");
     } else {
       setPassword("");
+      // Clear authentication status on failed attempt
+      localStorage.removeItem(AUTH_KEY);
       toast.error("Invalid password. Please try again.");
     }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setPassword("");
+    // Clear authentication status on logout
+    localStorage.removeItem(AUTH_KEY);
+    toast.success("Logged out successfully");
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -31,6 +54,16 @@ const ClientSkillPage = () => {
       handleSubmit();
     }
   };
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-center">
+          <Loader className="animate-spin size-5"/>
+        </div>
+      </div>
+    );
+  }
   return (
     <main className="relative min-h-screen w-full dark:bg-black bg-white">
       {/* Background pattern */}
