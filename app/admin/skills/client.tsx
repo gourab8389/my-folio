@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
-import { Pencil, Trash2 } from 'lucide-react';
-import Image from 'next/image';
-import { toast } from 'sonner';
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 import {
   AlertDialog,
@@ -18,13 +16,6 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -35,7 +26,11 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/input";
 import { Label } from "@/components/label";
-import { useRouter } from 'next/navigation';
+import { HoverBorderGradient } from "@/components/hover-border-gradient";
+import Link from "next/link";
+import PageLoader from "@/app/components/loader";
+import SkillDataProvider from "@/components/SkillDataProvider";
+import { Pencil, Trash2 } from "lucide-react";
 
 interface Skill {
   _id: string;
@@ -44,22 +39,24 @@ interface Skill {
 }
 
 export default function ClientSkillPage() {
-  const router = useRouter();
   const [skills, setSkills] = useState<Skill[]>([]);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [updateForm, setUpdateForm] = useState({
-    title: '',
-    imageUrl: '',
+    title: "",
+    imageUrl: "",
   });
 
   const fetchSkills = async () => {
     try {
-      const response = await fetch('/api/skills');
+      const response = await fetch("/api/skills");
       const data = await response.json();
       setSkills(data.skills);
+      setIsLoading(false);
     } catch (error) {
-      console.error('Error fetching skills:', error);
-      toast.error('Failed to fetch skills');
+      console.error("Error fetching skills:", error);
+      toast.error("Failed to fetch skills");
+      setIsLoading(false);
     }
   };
 
@@ -70,33 +67,35 @@ export default function ClientSkillPage() {
   const handleDelete = async (id: string) => {
     try {
       const response = await fetch(`/api/skills/${id}`, {
-        method: 'DELETE',
+        method: "DELETE",
       });
-  
+
       if (response.ok) {
-        toast.success('Skill deleted successfully');
-        setSkills((prevSkills) => prevSkills.filter((skill) => skill._id !== id));
+        toast.success("Skill deleted successfully");
+        setSkills((prevSkills) =>
+          prevSkills.filter((skill) => skill._id !== id)
+        );
       } else {
-        throw new Error('Failed to delete skill');
+        throw new Error("Failed to delete skill");
       }
     } catch (error) {
-      console.error('Error deleting skill:', error);
-      toast.error('Failed to delete skill');
+      console.error("Error deleting skill:", error);
+      toast.error("Failed to delete skill");
     }
   };
-  
+
   const handleUpdate = async (id: string) => {
     try {
       const response = await fetch(`/api/skills/${id}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(updateForm),
       });
-  
+
       if (response.ok) {
-        toast.success('Skill updated successfully');
+        toast.success("Skill updated successfully");
         setSkills((prevSkills) =>
           prevSkills.map((skill) =>
             skill._id === id ? { ...skill, ...updateForm } : skill
@@ -104,119 +103,158 @@ export default function ClientSkillPage() {
         );
         setSelectedSkill(null);
       } else {
-        throw new Error('Failed to update skill');
+        throw new Error("Failed to update skill");
       }
     } catch (error) {
-      console.error('Error updating skill:', error);
-      toast.error('Failed to update skill');
+      console.error("Error updating skill:", error);
+      toast.error("Failed to update skill");
     }
   };
-  
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-8">Manage Skills</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {skills.map((skill) => (
-          <Card key={skill._id} className="flex flex-col">
-            <CardHeader>
-              <CardTitle>{skill.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <div className="relative w-full h-48">
-                <Image
-                  src={skill.imageUrl}
-                  alt={skill.title}
-                  fill
-                  className="object-contain rounded-md"
-                />
-              </div>
-            </CardContent>
-            <CardFooter className="flex justify-end space-x-2">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => {
-                      setSelectedSkill(skill);
-                      setUpdateForm({
-                        title: skill.title,
-                        imageUrl: skill.imageUrl,
-                      });
-                    }}
-                  >
-                    <Pencil className="h-4 w-4" />
-                  </Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Update Skill</DialogTitle>
-                    <DialogDescription>
-                      Make changes to the skill details below.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="space-y-4 py-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="title">Title</Label>
-                      <Input
-                        id="title"
-                        value={updateForm.title}
-                        onChange={(e) =>
-                          setUpdateForm({ ...updateForm, title: e.target.value })
-                        }
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="imageUrl">Image URL</Label>
-                      <Input
-                        id="imageUrl"
-                        value={updateForm.imageUrl}
-                        onChange={(e) =>
-                          setUpdateForm({ ...updateForm, imageUrl: e.target.value })
-                        }
-                      />
-                    </div>
-                  </div>
-                  <DialogFooter>
-                    <Button
-                      onClick={() => selectedSkill && handleUpdate(selectedSkill._id)}
-                    >
-                      Save Changes
-                    </Button>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
+    <main className="relative min-h-screen w-full dark:bg-black bg-white">
+      {/* Background pattern */}
+      <div className="fixed inset-0 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pointer-events-none" />
+      <div className="fixed inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] pointer-events-none" />
 
-              <AlertDialog>
-                <AlertDialogTrigger asChild>
-                  <Button variant="destructive" size="icon">
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>Delete Skill</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      Are you sure you want to delete this skill? This action cannot be
-                      undone.
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction
-                      onClick={() => handleDelete(skill._id)}
-                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-                    >
-                      Delete
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            </CardFooter>
-          </Card>
-        ))}
+      {/* Content */}
+      <div className="relative z-10">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm">
+          <div className="flex justify-between items-center px-6 md:px-12 lg:px-24 py-4">
+            <Link href={"/admin"}>
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                <span className="flex flex-row gap-1">Back</span>
+              </HoverBorderGradient>
+            </Link>
+          </div>
+        </div>
+
+        {/* Main content with loader */}
+        <div id="projects" className="px-6 md:px-12 lg:px-24 py-12 pt-24">
+          <h1 className="text-3xl lg:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 dark:to-slate-600 mb-8">
+            All of My Projects
+          </h1>
+
+          {isLoading ? (
+            <PageLoader />
+          ) : (
+            <div className="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-2 gap-4 w-full lg:w-4/5 mx-auto my-[3rem]">
+              {skills.map((item, index) => (
+                <div className="flex flex-col gap-4 p-4 rounded-lg justify-center items-center bg-gray-50 dark:bg-black shadow-md hover:bg-slate-100 dark:hover:bg-slate-950 border dark:border-gray-950">
+                  <div key={index} className="flex gap-4">
+                    <SkillDataProvider
+                      key={index}
+                      src={item.imageUrl}
+                      width={30}
+                      height={30}
+                      index={index}
+                      className={"rounded-full bg-white border border-white"}
+                    />
+                    <span className="text-xs lg:text-md font-semibold text-black dark:text-white">
+                      {item.title}
+                    </span>
+                  </div>
+                  <div className="flex gap-4">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button
+                        className="border-none"
+                          variant="outline"
+                          size="xs"
+                          onClick={() => {
+                            setSelectedSkill(item);
+                            setUpdateForm({
+                              title: item.title,
+                              imageUrl: item.imageUrl,
+                            });
+                          }}
+                        >
+                          <Pencil className="h-4 w-4" />
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Update Skill</DialogTitle>
+                          <DialogDescription>
+                            Make changes to the skill details below.
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4 py-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="title">Title</Label>
+                            <Input
+                              id="title"
+                              value={updateForm.title}
+                              onChange={(e) =>
+                                setUpdateForm({
+                                  ...updateForm,
+                                  title: e.target.value,
+                                })
+                              }
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="imageUrl">Image URL</Label>
+                            <Input
+                              id="imageUrl"
+                              value={updateForm.imageUrl}
+                              onChange={(e) =>
+                                setUpdateForm({
+                                  ...updateForm,
+                                  imageUrl: e.target.value,
+                                })
+                              }
+                            />
+                          </div>
+                        </div>
+                        <DialogFooter>
+                          <Button
+                            onClick={() =>
+                              selectedSkill && handleUpdate(selectedSkill._id)
+                            }
+                          >
+                            Save Changes
+                          </Button>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
+
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button className="border-none" variant="outline" size="xs">
+                          <Trash2 className="h-4 w-4" color="red" />
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Delete Skill</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            Are you sure you want to delete this skill? This
+                            action cannot be undone.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Cancel</AlertDialogCancel>
+                          <AlertDialogAction
+                            onClick={() => handleDelete(item._id)}
+                            className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                          >
+                            Delete
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
