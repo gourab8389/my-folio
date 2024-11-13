@@ -37,7 +37,7 @@ function ProjectForm() {
 
             if (response.ok) {
                 toast.success("Project Created");
-                router.push("/allProjects");
+                router.push("/all-projects");
             } else {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to create the project");
