@@ -17,7 +17,6 @@ export function Form() {
         <TabsTrigger value="skills">Skills</TabsTrigger>
       </TabsList>
 
-
       <ProjectForm/>
       <SkillsForm/>
 

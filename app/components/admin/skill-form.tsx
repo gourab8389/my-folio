@@ -36,7 +36,7 @@ function SkillsForm() {
 
         if (response.ok) {
             toast.success("Project Created");
-            router.push("/all-projects");
+            router.push("/admin/skills");
         } else {
             const errorData = await response.json();
             throw new Error(errorData.message || "Failed to create the project");
