@@ -9,7 +9,7 @@ import { Input } from "@/components/input";
 import { toast } from "sonner";
 import SkillContentPage from "@/app/components/admin/admin-skill-page.tsx/skill-content";
 
-const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 const ClientSkillPage = () => {
 
