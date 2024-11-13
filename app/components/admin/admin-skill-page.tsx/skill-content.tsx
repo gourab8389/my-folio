@@ -132,9 +132,9 @@ export default function SkillContentPage () {
         </div>
 
         {/* Main content with loader */}
-        <div id="projects" className="px-6 md:px-12 lg:px-24 py-12 pt-24">
+        <div className="px-6 md:px-12 lg:px-24 py-12 pt-24">
           <h1 className="text-3xl lg:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-blue-500 dark:from-blue-300 to-neutral-400 dark:to-slate-600 mb-8">
-            All of My Projects
+            All of My Skills
           </h1>
 
           {isLoading ? (
