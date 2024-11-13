@@ -42,7 +42,7 @@ const ClientAdminPage = () => {
           <Link href={"/"}>
             <Button
               variant="outline"
-              className="hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold"
             >
               ← Back to Home
             </Button>
