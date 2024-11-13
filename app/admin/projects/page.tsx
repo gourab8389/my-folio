@@ -1,9 +1,10 @@
 import React from 'react'
+import ClientProjectPage from './client'
 
 const AllProjectsUpdatePage = () => {
   return (
     <div>
-      Hello
+      <ClientProjectPage/>
     </div>
   )
 }
