@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Form } from "../components/admin/Form";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Label } from "@/components/label";
-import { Input } from "@/components/input";
 import { toast } from "sonner";
+import EnhancedPasswordInput from "@/components/password-input";
+
 
 const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
@@ -62,18 +62,13 @@ const ClientAdminPage = () => {
                 </p>
               </div>
               <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
-                  <Input
-                    type="password"
-                    id="password"
-                    placeholder="Enter password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    className="w-full"
-                  />
-                </div>
+                <EnhancedPasswordInput
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  label="Password"
+                  placeholder="Enter password"
+                />
                 <Button className="w-full" onClick={handleSubmit}>
                   Submit
                 </Button>
