@@ -7,7 +7,7 @@ import { Label } from "@/components/label";
 import { Input } from "@/components/input";
 import { toast } from "sonner";
 
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
 const ClientAdminPage = () => {
   const [password, setPassword] = useState("");
