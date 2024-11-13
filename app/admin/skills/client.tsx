@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Label } from "@/components/label";
-import { Input } from "@/components/input";
+import EnhancedPasswordInput from "@/components/password-input";
 import { toast } from "sonner";
 import SkillContentPage from "@/app/components/admin/admin-skill-page.tsx/skill-content";
 
@@ -13,25 +13,24 @@ const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
 const ClientSkillPage = () => {
 
-    const [password, setPassword] = useState("");
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
-    const handleSubmit = () => {
-      if (password === ADMIN_PASSWORD) {
-        setIsAuthenticated(true);
-        toast.success("Successfully authenticated!");
-      } else {
-        setPassword("");
-        toast.error("Invalid password. Please try again.");
-      }
-    };
-  
-    const handleKeyPress = (e: React.KeyboardEvent) => {
-      if (e.key === "Enter") {
-        handleSubmit();
-      }
-    };
+  const [password, setPassword] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  const handleSubmit = () => {
+    if (password === ADMIN_PASSWORD) {
+      setIsAuthenticated(true);
+      toast.success("Successfully authenticated!");
+    } else {
+      setPassword("");
+      toast.error("Invalid password. Please try again.");
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
   return (
     <main className="relative min-h-screen w-full dark:bg-black bg-white">
       {/* Background pattern */}
@@ -67,18 +66,13 @@ const ClientSkillPage = () => {
                 </p>
               </div>
               <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
-                  <Input
-                    type="password"
-                    id="password"
-                    placeholder="Enter password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    className="w-full"
-                  />
-                </div>
+                  <EnhancedPasswordInput
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  label="Password"
+                  placeholder="Enter password"
+                />
                 <Button className="w-full" onClick={handleSubmit}>
                   Submit
                 </Button>
