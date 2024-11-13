@@ -1,36 +1,33 @@
-"use client"
-
+"use client";
 import { useState } from "react";
-
+import { Form } from "../components/admin/Form";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Label } from "@/components/label";
 import { Input } from "@/components/input";
 import { toast } from "sonner";
-import ProjectPageContent from "@/app/components/admin/admin-project-page.tsx/project-content";
 
 const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-const ClientProjectPage = () => {
+const ClientAdminPage = () => {
+  const [password, setPassword] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    const [password, setPassword] = useState("");
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
-    const handleSubmit = () => {
-      if (password === ADMIN_PASSWORD) {
-        setIsAuthenticated(true);
-        toast.success("Successfully authenticated!");
-      } else {
-        setPassword("");
-        toast.error("Invalid password. Please try again.");
-      }
-    };
-  
-    const handleKeyPress = (e: React.KeyboardEvent) => {
-      if (e.key === "Enter") {
-        handleSubmit();
-      }
-    };
+  const handleSubmit = () => {
+    if (password === ADMIN_PASSWORD) {
+      setIsAuthenticated(true);
+      toast.success("Successfully authenticated!");
+    } else {
+      setPassword("");
+      toast.error("Invalid password. Please try again.");
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
 
   return (
     <main className="relative min-h-screen w-full dark:bg-black bg-white">
@@ -41,18 +38,16 @@ const ClientProjectPage = () => {
       {/* Content */}
       <div className="relative">
         {/* Back Button */}
-        {!isAuthenticated && (
-            <div className="p-6">
-            <Link href={"/"}>
-              <Button
-                variant="outline"
-                className="hover:bg-gray-100 dark:hover:bg-gray-800"
-              >
-                ← Back to Home
-              </Button>
-            </Link>
-          </div>
-        )}
+        <div className="p-6">
+          <Link href={"/"}>
+            <Button
+              variant="outline"
+              className="hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ← Back to Home
+            </Button>
+          </Link>
+        </div>
 
         {/* Main Content */}
         <div className="flex min-h-[80vh] items-center justify-center px-4">
@@ -85,7 +80,9 @@ const ClientProjectPage = () => {
               </div>
             </div>
           ) : (
-            <ProjectPageContent/>
+            <div className="flex h-auto items-center justify-center my-10 lg:mb-10 mx-auto">
+              <Form />
+            </div>
           )}
         </div>
       </div>
@@ -93,4 +90,4 @@ const ClientProjectPage = () => {
   );
 };
 
-export default ClientProjectPage;
+export default ClientAdminPage;
