@@ -3,8 +3,7 @@ const data = {
     address: "Masterpara, Katwa",
     information: {
         About: "I am a good girl", 
-        School: "D.D.C.Girls' HS School"
-
-    }
-    
+        School: "D.D.C.Girls' HS School",
+        Class:"5"
+    }    
 }
